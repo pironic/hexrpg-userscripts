@@ -5,6 +5,8 @@
 // @description  try to take over the world!
 // @author       You
 // @match        http://www.hexrpg.com/games/wizardmoney.php
+// @updateURL    http://bit.ly/1WsKHyO
+// @downloadURL  http://bit.ly/1WsKHyO
 // @grant        none
 // ==/UserScript==
 

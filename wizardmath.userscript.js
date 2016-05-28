@@ -5,6 +5,8 @@
 // @description  try to take over the world!
 // @author       You
 // @match        http://www.hexrpg.com/games/wizardmath.php
+// @updateURL    http://bit.ly/1XFuC8f
+// @downloadURL  http://bit.ly/1XFuC8f
 // @grant        none
 // ==/UserScript==
 
