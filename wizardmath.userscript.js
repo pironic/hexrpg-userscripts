@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         HEXRPG WizardMath Calculator
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @namespace    https://github.com/pironic/hexrpg-userscripts/
+// @version      0.2
+// @description  auto win the wizard math game and submit winning answer
+// @author       Michael Writhe
 // @match        http://www.hexrpg.com/games/wizardmath.php
 // @updateURL    http://bit.ly/1XFuC8f
 // @downloadURL  http://bit.ly/1XFuC8f

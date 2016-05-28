@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         HEXRPG WizardMoney Calculator
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @namespace    https://github.com/pironic/hexrpg-userscripts/
+// @version      0.2
+// @description  auto win the wizard money and submit for you.
+// @author       Michael Writhe
 // @match        http://www.hexrpg.com/games/wizardmoney.php
 // @updateURL    http://bit.ly/1WsKHyO
 // @downloadURL  http://bit.ly/1WsKHyO
