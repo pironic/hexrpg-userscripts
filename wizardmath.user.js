@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         HEXRPG WizardMath Calculator
 // @namespace    https://github.com/pironic/hexrpg-userscripts/
-// @version      0.2
+// @version      0.3
 // @description  auto win the wizard math game and submit winning answer
 // @author       Michael Writhe
 // @match        http://www.hexrpg.com/games/wizardmath.php
-// @updateURL    http://bit.ly/1XFuC8f
-// @downloadURL  http://bit.ly/1XFuC8f
+// @updateURL    http://l.writhem.com/20Q1474
+// @downloadURL  http://l.writhem.com/20Q1474
 // @grant        none
 // ==/UserScript==
 

@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         HEXRPG WizardMoney Calculator
 // @namespace    https://github.com/pironic/hexrpg-userscripts/
-// @version      0.2
+// @version      0.3
 // @description  auto win the wizard money and submit for you.
 // @author       Michael Writhe
 // @match        http://www.hexrpg.com/games/wizardmoney.php
-// @updateURL    http://bit.ly/1WsKHyO
-// @downloadURL  http://bit.ly/1WsKHyO
+// @updateURL    http://l.writhem.com/1NVSZwA
+// @downloadURL  http://l.writhem.com/1NVSZwA
 // @grant        none
 // ==/UserScript==
 
