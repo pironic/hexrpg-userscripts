@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HEXRPG WizardMoney Calculator
 // @namespace    https://github.com/pironic/hexrpg-userscripts/
-// @version      0.7
+// @version      0.9
 // @description  auto win the wizard money and submit for you.
 // @author       Michael Writhe
 // @match        http://www.hexrpg.com/games/wizardmoney.php
@@ -20,8 +20,12 @@ window.addEventListener('load', function() {
         setTimeout(function(){
             // reload back to wizardmoney in 10 seconds.
             console.log("navigating back to wizardmoney now...");
-            //window.location.replace("http://www.hexrpg.com/games/wizardmoney.php");
+            window.location.replace("http://www.hexrpg.com/games/wizardmoney.php");
         }, 10000);
+        // $("<div class=timer></div>").insertAfter($('a[href$="wizardmoney.php"]'))
+        // $(".timer").countdowntimer({
+        //             seconds : 10
+        // });
     } else {
         // we are on the wizardmoney page.
         var galleon = 0;
@@ -49,13 +53,15 @@ window.addEventListener('load', function() {
         $("[name=s]").val(String(sickle));
         $("[name=k]").val(String(knut));
         if (galleon+sickle+knut > 0) {
-            $('form').submit();
+            setTimeout(function(){
+                $('form').submit();
+            },getRandomInt(1000,10000));
         } else {
             var haystack = $('p').text();
-            var needle = new RegExp(/(\d.*) more minute/);
+            var needle = new RegExp(/(\d{1,4}) more minute/);
             var minutes = needle.exec(haystack);
             if (minutes !== null) {
-                minutes = parseInt(minutes[1]) + getRandomInt(-1,(parseInt(minutes[1])*0.66));
+                minutes = parseInt(minutes[1]) + Math.min(getRandomInt(-1,30),(Math.round(parseInt(minutes[1])*0.5,0)));
                 console.log("minutes: "+minutes);
                 setTimeout(function(){
                     window.location = "//www.hexrpg.com/games/wizardmoney.php";

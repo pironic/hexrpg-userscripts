@@ -1,6 +1,17 @@
 // ==UserScript==
 // @name         HEXRPG WizardMath Calculator
 // @namespace    https://github.com/pironic/hexrpg-userscripts/
+// @version      0.9
+// @description  auto win the wizard math game and submit winning answer
+// @author       Michael Writhe
+// @match        http://www.hexrpg.com/games/wizardmath*
+// @updateURL    http://l.writhem.com/20Q1474
+// @downloadURL  http://l.writhem.com/20Q1474
+// @grant        none
+// ==/UserScript==
+// ==UserScript==
+// @name         HEXRPG WizardMath Calculator
+// @namespace    https://github.com/pironic/hexrpg-userscripts/
 // @version      0.7
 // @description  auto win the wizard math game and submit winning answer
 // @author       Michael Writhe
@@ -27,12 +38,14 @@ window.addEventListener('load', function() {
     if (total > 0) {
         $('[name=ans]').val(String(total));
         //alert(total);
-        $('form').submit();
+        setTimeout(function(){
+                $('form').submit();
+            },getRandomInt(1000,20000));
     } else {
         var haystack = $('b').last().text();
 
         //frogs
-        var needle = new RegExp(/(\d.*) chocolate frog/);
+        var needle = new RegExp(/(\d{1,4}) chocolate frog/);
         var frogs = needle.exec(haystack);
         if (frogs !== null) {
             frogs = frogs[1];
@@ -46,10 +59,10 @@ window.addEventListener('load', function() {
         }
 
         //minutes
-        needle = new RegExp(/(\d.*) more minute/);
+        needle = new RegExp(/(\d{1,4}) more minute/);
         var minutes = needle.exec(haystack);
         if (minutes !== null) {
-            minutes = parseInt(minutes[1]) + getRandomInt(-1,(parseInt(minutes[1])*0.66));
+            minutes = parseInt(minutes[1]) + Math.min(getRandomInt(-1,20),(Math.round(parseInt(minutes[1])*0.66,0)));
             console.log("minutes: "+minutes);
             if (minutes > 0) {
                 setTimeout(function(){
