@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HEXRPG WizardMath Calculator
 // @namespace    https://github.com/pironic/hexrpg-userscripts/
-// @version      0.5
+// @version      0.6
 // @description  auto win the wizard math game and submit winning answer
 // @author       Michael Writhe
 // @match        http://www.hexrpg.com/games/wizardmath*
@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
         needle = new RegExp(/(\d|\d.) more minute/);
         var minutes = needle.exec(haystack);
         if (minutes !== null) {
-            minutes = parseInt(minutes[1]) + getRandomInt(-1,15);
+            minutes = parseInt(minutes[1]) + getRandomInt(-1,(parseInt(minutes[1])*0.66));
             console.log("minutes: "+minutes);
             if (minutes > 0) {
                 setTimeout(function(){
