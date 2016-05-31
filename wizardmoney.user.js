@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HEXRPG WizardMoney Calculator
 // @namespace    https://github.com/pironic/hexrpg-userscripts/
-// @version      0.6
+// @version      0.7
 // @description  auto win the wizard money and submit for you.
 // @author       Michael Writhe
 // @match        http://www.hexrpg.com/games/wizardmoney.php
@@ -52,7 +52,7 @@ window.addEventListener('load', function() {
             $('form').submit();
         } else {
             var haystack = $('p').text();
-            var needle = new RegExp(/(\d|\d.) more minute/);
+            var needle = new RegExp(/(\d.*) more minute/);
             var minutes = needle.exec(haystack);
             if (minutes !== null) {
                 minutes = parseInt(minutes[1]) + getRandomInt(-1,(parseInt(minutes[1])*0.66));
